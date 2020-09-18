@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 body {
     font-family: "Noto Sans KR", sans-serif;
-    background-color: #7ec7ff;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,13 +12,25 @@ body {
     justify-content: center;
     align-items: center;
 }
+#input {
+    width: 80%;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    margin-bottom: 20px;
+    outline: none;
+    border-bottom: 2px solid #a3c2ff;
+}
 .title {
     -webkit-user-select: none;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
     margin-top: 50px;
-    background-color: #a3c2ff;
+    background-color: #035afc;
+    color: #f2f2f2;
     width: 700px;
     height: 125px;
     font-size: 70px;
@@ -29,13 +41,15 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.sub_title {
+    display: none;
+}
 .content-list {
     overflow-y: scroll;
     width: 1000px;
     height: 35rem;
     padding: 10px;
-    background-color: #f2f2f2;
+    background-color: white;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -78,7 +92,7 @@ body {
     width: 100px;
     height: 50px;
     cursor: pointer;
-    background-color: #f2f2f2;
+    background-color: white;
     outline: none;
     border: none;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -92,11 +106,32 @@ body {
     align-items: center;
     transition: 0.3s ease-in-out;
 }
+input {
+    font-family: "Noto Sans KR", sans-serif;
+}
+#add-button {
+    width: 150px;
+    height: 60px;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: "Noto Sans KR", sans-serif;
+    transition: ease-in-out 0.2s;
+}
+#add-button:hover {
+    background-color: #2576f7;
+    color: white;
+}
 .buttons .clear-all-button {
     width: 100px;
     height: 50px;
     cursor: pointer;
-    background-color: #f2f2f2;
+    background-color: #f72537;
     outline: none;
     border: none;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -116,10 +151,6 @@ body {
 }
 .create-button:active {
     transform: scale(0.93);
-}
-.clear-all-button:hover {
-    background-color: #f72537;
-    color: #f2f2f2;
 }
 .clear-all-button:active {
     transform: scale(0.93);

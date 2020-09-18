@@ -9,16 +9,22 @@
     </head>
     <body>
         <div class="wrap">
-            <div class="title">Two Do List</div>
+            <div class="title">
+                뭐하냐?
+                <div class="sub_title" id="sub_title">잘 챙기라고~</div>
+            </div>
             <div class="content-list">
+                <div id="input-todo"></div>
                 <div class="content">
                     <div class="clear-button">&times;</div>
                     <div class="todo-text">{{ message }}</div>
                 </div>
             </div>
             <div class="buttons">
-                <div class="create-button">추가</div>
-                <div class="clear-all-button">모두 삭제</div>
+                <div class="create-button" v-on:click="onCreate()">추가</div>
+                <div class="clear-all-button" v-on:cLick="onDelete()">
+                    모두 삭제
+                </div>
             </div>
         </div>
         <script>
@@ -26,9 +32,35 @@
                 el: ".wrap",
                 data: {
                     message: "뭐하냐? 뭐하냐구우",
+                    flag: 1,
                 },
                 methods: {
-                    onCreate() {},
+                    onCreate() {
+                        const input = document.getElementById("input-todo");
+                        if (this.flag === 1) {
+                            input.innerHTML =
+                                "<input type='text' id='input'></input> <button id='add-button'>추가</button>";
+                            this.flag = -1;
+                        } else if (this.flag === 2) {
+                            input.style.display = "inline";
+                            this.flag = -1;
+                        } else {
+                            input.style.display = "none";
+                            this.flag = 2;
+                        }
+                    },
+                    onDelete() {
+                        const result = confirm(
+                            "모든 일정들이 사라집니다. 괜찮습니까?"
+                        );
+                        if (result) {
+                            //예를 누른 경우
+                            alert("모든 일정들이 삭제되었습니다.");
+                        } else {
+                            //아니요를 누른 경우
+                            alert("일정 지우기가 취소되었습니다.");
+                        }
+                    },
                 },
             });
         </script>
