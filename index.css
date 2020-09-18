@@ -1,0 +1,18 @@
+.title {
+  background-color: #7ec7ff;
+  width: 700px;
+  height: 125px;
+  font-size: 70px;
+  text-align: center;
+  border-radius: 50px;
+  margin-left: 600px;
+}
+
+.content {
+  width: 1650px;
+  height: 725px;
+  background-color: #ebfff2;
+  border: solid lightgrey 1px;
+  margin: 50px;
+  margin-left: 120px;
+}
